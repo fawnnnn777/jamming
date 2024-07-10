@@ -9,7 +9,6 @@ function SearchBar(){
 
     return (
         <>
-        <h1> hello world </h1>
             <form>
                 <input onChange={handleChange} value={userInput} type="text"></input>
                 <button type="submit"> <span class="material-symbols-outlined">

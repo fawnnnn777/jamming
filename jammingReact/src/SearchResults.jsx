@@ -1,0 +1,18 @@
+import React from "react";
+import Track from "./Track";
+
+function SearchResults(props){
+
+    return (
+        <>
+        <h1> Results </h1>
+        {props.songs.map((song)=>{
+            return(
+                <Track key={song.name} name={song.name} artist={song.artist} album={song.album}/>
+            )
+        })}
+        </>
+    )
+}
+
+export default SearchResults
