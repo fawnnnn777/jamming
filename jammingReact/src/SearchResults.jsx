@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Track from "./Track";
+
 
 function SearchResults(props){
 
@@ -8,7 +9,7 @@ function SearchResults(props){
         <h1> Results </h1>
         {props.songs.map((song)=>{
             return(
-                <Track key={song.name} name={song.name} artist={song.artist} album={song.album}/>
+                <Track addToPlaylist={props.addToPlaylist} id={song.id} key={song.name} name={song.name} artist={song.artist} album={song.album}/>
             )
         })}
         </>

@@ -1,16 +1,13 @@
 import React from "react";
 
-function Track({name, artist, album}){
-    const handleSave = (e)=>{
-        console.log(`save`)
-    }
+function Track(props){
 
     return (
         <>
         <div>
-            <h2>{name}</h2>
-            <p>{artist} - {album}</p>
-            <button onClick={handleSave}><span class="material-symbols-outlined">favorite</span></button>
+            <h2>{props.name}</h2>
+            <p>{props.artist} - {props.album}</p>
+            <button onClick={() => props.addToPlaylist(props.id)}><span class="material-symbols-outlined">favorite</span></button>
         </div>
         </>
     )
