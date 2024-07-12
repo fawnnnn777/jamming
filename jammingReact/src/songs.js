@@ -10,5 +10,13 @@ export const songs = [
         "name": "overcompensate",
         "artist": "twenty one pilots",
         "album": "trench"
+    },
+    {
+        "id": 3,
+        "name": "euphoria",
+        "artist": "kendrick lamar",
+        "album": "none"
     }
 ]
+
+console.log(songs.id)

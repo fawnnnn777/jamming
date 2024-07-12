@@ -8,6 +8,7 @@ function Track(props){
             <h2>{props.name}</h2>
             <p>{props.artist} - {props.album}</p>
             <button onClick={() => props.addToPlaylist(props.id)}><span class="material-symbols-outlined">favorite</span></button>
+            <h1>{props.id}</h1>
         </div>
         </>
     )

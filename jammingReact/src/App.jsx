@@ -4,6 +4,7 @@ import SearchResults from "./SearchResults";
 import Playlist from "./Playlist";
 
 import { songs } from "./songs";
+import Track from "./Track";
 
 
 function App(){
@@ -13,12 +14,16 @@ function App(){
   const addToPlaylist = (id) =>{
       if(Personal.includes(id)){
           console.log('not possible, song alredy on your list')
+          console.log(Personal)
+
       }else{
-          setPersonal((prev)=>{
-              return [id, ...prev]
-          })
+          setPersonal([
+            ...Personal,
+            id
+          ])
+          console.log(id)
+          console.log(Personal)
       }
-      console.log(Personal)
   } 
 
   
@@ -28,6 +33,11 @@ function App(){
       <SearchBar/>
       <SearchResults songs={songs} addToPlaylist={addToPlaylist}/>
       <Playlist songs={Personal}/>
+      {Personal.map((song)=>{
+        let s = songs.find(s => s.id === song)
+        console.log(s)
+        return <Track id={s.id} key={s.name} name={s.name} artist={s.artist} album={s.album}></Track>
+      })}
     </>
   )
 }
