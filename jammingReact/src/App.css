@@ -1,0 +1,11 @@
+.title{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #50B498;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 3rem;
+}

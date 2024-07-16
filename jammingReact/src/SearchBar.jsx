@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from './styles/searchbar.module.css'
 
 function SearchBar(){
     const [userInput, setUserInput] = useState('')
@@ -9,7 +10,7 @@ function SearchBar(){
 
     return (
         <>
-            <form>
+            <form className={styles.searchForm}>
                 <input onChange={handleChange} value={userInput} type="text"></input>
                 <button type="submit"> <span class="material-symbols-outlined">
 search
