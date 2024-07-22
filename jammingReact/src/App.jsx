@@ -2,10 +2,19 @@ import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import SearchResults from "./SearchResults";
 import Playlist from "./Playlist";
-import { songs } from "./songs";
 import Track from "./Track";
 import './App.css'
+import { getResults } from "./spotifyAccess";
+
 function App(){
+
+  let songs = []
+
+  const submitResult = (e, query) =>{
+    e.preventDefault()
+    console.log(query)
+    getResults(query)
+  }
 
   const [Personal, setPersonal] = useState([])
 
@@ -40,11 +49,11 @@ function App(){
       songsArray.push(s.uri)
     })
   }
-  
+
   return(
     <>
     <h1 className="title"> Spotify Jamming </h1>
-      <SearchBar/>
+      <SearchBar submitResult={submitResult}/>
       <SearchResults songs={songs} addToPlaylist={addToPlaylist}/>
       <Playlist savePlaylist={savePlaylist} songs={Personal}/>
       {Personal.map((song)=>{
