@@ -26,7 +26,14 @@ export async function getResults(query){
     })
     const search = await result.json()
     for(let track in search.tracks.items){
-        songs.push(search.tracks.items[track])
+        let songObject = {}
+        songObject.name = search.tracks.items[track].name
+        songObject.id = search.tracks.items[track].id
+        songObject.uri = search.tracks.items[track].uri
+        songObject.artist = search.tracks.items[track].artists[0].name
+        songObject.album = search.tracks.items[track].album.name
+        songs.push(songObject)
     }
+    console.log(songs)
     return songs
 }

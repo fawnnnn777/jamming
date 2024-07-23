@@ -8,13 +8,14 @@ import { getResults } from "./spotifyAccess";
 
 function App(){
 
-  let songs = []
+  const [songs, setSongs] = useState([]);
 
-  const submitResult = (e, query) =>{
-    e.preventDefault()
-    console.log(query)
-    getResults(query)
-  }
+  const submitResult = async (e, query) => {
+    e.preventDefault();
+    console.log(query);
+    const results = await getResults(query);
+    setSongs(results)
+  };
 
   const [Personal, setPersonal] = useState([])
 
