@@ -5,14 +5,28 @@
 }
 
 .trackInfo{
-    min-width: 300px;
-    max-width: 300px;
-    border: solid 1px black;
+    min-width: 450px;
+    max-width: 450px;
+    padding: 10px 20px;
 }
 
 .trackDiv > button{
     border-radius: 25px;
-    padding: 5px ;
-    background-color: #DEF9C4;
+    padding: 7px 10px 4px 10px;
+    max-height: 50px;
+    align-self: center;
+    background-color: transparent;
     border: rgb(255, 255, 255, 0.5);
+    cursor: pointer;
+    margin-right: 0px;
+}
+
+.trackDiv > button:hover{
+    font-weight: 600;
+}
+
+.trackDiv{
+    background-color: rgb(255, 255, 255, 0.5);
+    border:solid 1px rgb(255, 255, 255, 0.2);
+    width: 100%;
 }

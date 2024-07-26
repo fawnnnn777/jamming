@@ -1,0 +1,10 @@
+.resultsDiv{
+    margin: 50px;
+    background-color: #ff7e3e72;
+    min-width: 550px;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
