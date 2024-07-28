@@ -12,7 +12,7 @@ function Track(props){
             </div>
             {props.onPlaylist == true ?  <button onClick={() => props.removeFromPlaylist(props.id)}><span class="material-symbols-outlined">close</span></button> 
             : 
-            <button onClick={() => props.addToPlaylist(props.id)}><span class="material-symbols-outlined">favorite</span></button>}
+            <button onClick={() => props.addToPlaylist(props.uri)}><span class="material-symbols-outlined">favorite</span></button>}
         </div>
         </>
     )

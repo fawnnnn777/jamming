@@ -15,6 +15,7 @@ async function getToken(){
 }
 
 const token = await getToken()
+console.log(token)
 
 export async function getResults(query){
     let songs = []
@@ -36,4 +37,12 @@ export async function getResults(query){
     }
     console.log(songs)
     return songs
+}
+
+async function getAccessToken(){
+    var url = 'https://accounts.spotify.com/authorize';
+    url += '?response_type=token';
+    url += '&client_id=' + encodeURIComponent(client_id);
+    const result = await fetch()
+
 }

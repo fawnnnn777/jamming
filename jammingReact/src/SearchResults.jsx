@@ -11,7 +11,7 @@ function SearchResults(props){
         <h1 style={{color: "white"}}> Results </h1>
         {props.songs.map((song)=>{
             return(
-                <Track addToPlaylist={props.addToPlaylist} id={song.id} key={song.name} name={song.name} artist={song.artist} album={song.album}></Track>
+                <Track addToPlaylist={props.addToPlaylist} id={song.id} uri={song.uri}key={song.name} name={song.name} artist={song.artist} album={song.album}></Track>
             )
         })}
         </div>
